@@ -3,7 +3,7 @@ import random
 import time
 import sys
 
-blue = (138,43,226)
+dropColor = (138,43,226)
 baground = (230,230,250)
 
 
@@ -11,8 +11,6 @@ pygame.init()
 window=pygame.display.set_mode((1200,700))
 pygame.display.set_caption("3D Rain")
 
-speed = 1
-accelaration = 0.6
 clock = pygame.time.Clock()
 run = True
 
@@ -47,7 +45,7 @@ while run:
 	clock.tick(70)
 
 	for i in range(len(drop)):
-		pygame.draw.rect(window,blue,(drop[i][0],drop[i][1],breadth*drop[i][2],length*drop[i][2]))
+		pygame.draw.rect(window,dropColor,(drop[i][0],drop[i][1],breadth*drop[i][2],length*drop[i][2]))
 		
 		drop[i][1]+=(drop[i][4])
 		drop[i][4]+=(drop[i][3]*drop[i][2])
